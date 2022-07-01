@@ -1,0 +1,50 @@
+<!-- menu-grid -->
+<div>
+    <table class="table table-boardered table-striped table-hover" style="color: white;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of menus">
+                <td>{{i.id}}</td>
+                <td class="btn btn-success" (click)="fnSelect(i.name,i.id)">{{i.name}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.price}}</td>
+                <!-- <td>{{i.picture}}</td>   -->
+            </tr>
+        </tbody>
+
+        <!-- <a routerLink="menu"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a> -->
+    </table>
+
+
+
+    <h4 style="margin-top: 10rem;" class="text-center">Add to Cart</h4>
+    <form [formGroup]="menuForm">
+        <span> Id:</span><input type="number" name="" id="" formControlName="id" placeholder="Id of food item " class="form-control">
+        <span> Name:</span> <input type="text" name="" id="" formControlName="name" placeholder="Food item name" class="form-control">
+        <span> Description:</span>
+        <input type="text" name="" id="" formControlName="description" placeholder="Describe Your Food" class="form-control">
+        <span>Price:</span>
+        <input type="number" name="" id="" formControlName="price" placeholder="Price of Your item" class="form-control">
+        <!-- Picture:<input type="file"name="" id="" formControlName="picture" class="form-control" (change)="onFileChanged($event)">  -->
+        <br>
+        <div class="buttons">
+            <input type="button" value="Add  To Cart" class="btn btn-success" (click)="addMenu()">
+            <input type="update" value="Modify" class="btn btn-primary" (click)="updateMenu()">
+            <input type="delete" value="Delete" class="btn btn-warning" (click)="deleteMenu()">
+        </div>
+    </form>
+
+    <div style="margin-top: 6rem; margin-left: 50%;transform: translateX(-50%);" class="intrpltn">
+
+        {{menuForm.value | json}}
+    </div>
+
+
+</div>

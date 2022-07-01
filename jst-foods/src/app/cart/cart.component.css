@@ -1,0 +1,47 @@
+div {
+    width: 40%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+span,
+h4,
+.intrpltn {
+    color: white;
+}
+
+.intrpltn {
+    width: 80%;
+}
+
+form input {
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.buttons input {
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+    div {
+        width: 80%;
+    }
+    .buttons {
+        width: 50%;
+        margin-left: 21%;
+        transform: translateX(-50%);
+    }
+    .buttons input {
+        max-width: 70%;
+        font-size: 1rem;
+    }
+}
