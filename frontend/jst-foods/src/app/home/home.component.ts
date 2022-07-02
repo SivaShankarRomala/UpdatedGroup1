@@ -20,6 +20,15 @@ export class HomeComponent implements OnInit {
           $("#show-mntr-rating").slideToggle(500);
   
       });
+      $("#xplorebtn").click(function() {
+        window.location.href = ("menu");
+    });
+    $("#xplorebtn1").click(function() {
+      window.location.href = ("menu");
+  });
+  $("#xplorebtn2").click(function() {
+    window.location.href = ("menu");
+});
   
   });
     
